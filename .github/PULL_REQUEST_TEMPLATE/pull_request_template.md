@@ -16,7 +16,7 @@
 
 <!-- Describe edge cases and caveats -->
 
-## Screenshots (if appropriate)
+## Screenshots / Loom (if appropriate)
 
 ## How Has This Been Tested?
 
