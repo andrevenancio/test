@@ -1,3 +1,10 @@
+<!--
+README:
+In order to make this pull request easy to review, make sure you describe is using the template below.
+
+make sure the PR title follows the conventional commits standard (https://www.conventionalcommits.org/en/v1.0.0/) as this is tightly connected to our implementation of semver
+-->
+
 ## What's new
 
 <!--- Describe your changes in detail -->
