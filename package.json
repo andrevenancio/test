@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "this is a bot test",
   "main": "index.js",
-  "scripts": {
-    "build": "echo \"build\" && exit 1",
-    "test": "echo \"test\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andrevenancio/test.git"
