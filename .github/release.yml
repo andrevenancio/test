@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - develop
+  pull_request:
+    branches:
+      - develop
 
 jobs:
   release:
@@ -11,11 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # - name: Create changelog
-      #   id: changelog
-      #   uses: dragonraid/changelog-emitter
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Changelog emitter
+        uses: dragonraid/changelog-emitter@v0.3.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Bump tag
       #   if: steps.changelog.outputs.isEmpty == false
