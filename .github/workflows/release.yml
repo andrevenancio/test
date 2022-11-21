@@ -16,18 +16,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Create changelog text
-        id: changelog
-        uses: loopwerk/tag-changelog@v1
+     - name: Build Changelog
+        uses: mikepenz/release-changelog-builder-action@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          exclude_types: other,doc,chore
-
-      - name: Create release
-        uses: actions/create-release@latest
+          configurationJson: |
+            {
+              "template": "#{{CHANGELOG}}\n\n<details>\n<summary>Uncategorized</summary>\n\n#{{UNCATEGORIZED}}\n</details>",
+              "categories": [
+                {
+                    "title": "## 💬 Other",
+                    "labels": ["other"]
+                },
+                {
+                    "title": "## 📦 Dependencies",
+                    "labels": ["dependencies"]
+                }
+              ]
+            }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          body: ${{ steps.changelog.outputs.changes }}
