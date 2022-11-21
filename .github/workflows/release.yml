@@ -18,16 +18,7 @@ jobs:
         with:
           fetch-depth: 100
 
-      - name: Archive Artifacts
-        uses: actions/upload-artifact@v2
+      - name: Conventional Changelog Action
+        uses: TriPSs/conventional-changelog-action@v3
         with:
-          name: "App-Artifacts"
-          path: artifacts/*
-
-      - name: Build Changelog
-        id: github_release
-        uses: mikepenz/release-changelog-builder-action@v1
-        with:
-          configuration: ".github/config/configuration.json"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
