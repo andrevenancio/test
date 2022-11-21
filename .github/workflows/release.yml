@@ -10,10 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # doing tests
       - name: Test
         uses: actions/checkout@v3
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test --if-present
-      - name: Changelog emitter
-        uses: dragonraid/changelog-emitter@v0.3.1
+        - run: npm ci
+        - run: npm run build --if-present
+        - run: npm test --if-present
+      # changelog
+      - name: Create changelog
+        id: changelog
+        uses: dragonraid/changelog-emitter
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
