@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "this is a bot test",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"build\" && exit 1",
+    "test": "echo \"test\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrevenancio/test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrevenancio/test/issues"
+  },
+  "homepage": "https://github.com/andrevenancio/test#readme"
+}
