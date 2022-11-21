@@ -1,18 +1,12 @@
-# name: release
-
-# on:
-#   push:
-#     branches:
-#       - develop
-#   pull_request:
-#     branches:
-#       - develop
 name: Create Release
 
 on:
   push:
-    tags:
-      - "*"
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
 
 jobs:
   create-release:
