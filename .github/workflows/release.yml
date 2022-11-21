@@ -2,11 +2,8 @@ name: Create Release
 
 on:
   push:
-    branches:
-      - develop
-  pull_request:
-    branches:
-      - develop
+    tags:
+      - "*"
 
 jobs:
   create-release:
