@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-     - name: Build Changelog
+      - name: Build Changelog
         uses: mikepenz/release-changelog-builder-action@v3
         with:
           configurationJson: |
