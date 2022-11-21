@@ -14,7 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: dragonraid/changelog-emitter
+      - name: Changelog emitter
+        uses: dragonraid/changelog-emitter@v0.3.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
