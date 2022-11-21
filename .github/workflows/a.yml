@@ -14,9 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Create changelog
-        id: changelog
-        uses: dragonraid/changelog-emitter
+      - uses: dragonraid/changelog-emitter
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
