@@ -1,4 +1,4 @@
-name: release
+name: a
 
 on:
   pull_request:
